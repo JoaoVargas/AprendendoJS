@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basico</title>
+</head>
+<body>
+    <script>
+        console.log("Teste");
+        
+        //Comentarios------------------------------------------
+        console.log("Comentarios");
+        //Inline
+        /*
+        Multiplas linhas
+        */
+        
+        //Data Types-------------------------------------------
+        console.log("Data Types");
+        //undef, null, bool, str, symbol, number, obj
+    
+        var variavelUm = "string"; // usada no programa todo
+        variavelUm = 8;
+    
+        let variavelDois = "outra"; // só escopo onde declarou
+    
+        const tres = 3; // imutável
+    
+        //Armazenando e declarando-----------------------------
+        console.log("Armazenando e declarando");
+        var a;
+        console.log(a);
+    
+        var b = 2;
+        a = 7;
+        b = a;
+    
+        console.log(a);
+    
+        a = null;
+        console.log(a);
+    
+        //Operadores-------------------------------------------
+        console.log("Operadores");
+        var a = 1;
+        var b = 2;
+        var c;
+    
+        //soma
+        c = a + b;
+        console.log(c);
+    
+        //subtracao
+        c = a - b;
+        console.log(c);
+    
+        //multipli
+        c = a * b;
+        console.log(c);
+    
+        //divisao
+        c = a / b;
+        console.log(c);
+
+        c = a % b;
+        console.log(c);
+    
+        //increvemtando
+        c = c + 1;
+        console.log(c);
+
+        c += 1;
+        console.log(c);
+    
+        c ++;
+        console.log(c);
+    
+        c = c - 1;
+        console.log(c);
+
+        c -= 1;
+        console.log(c);
+    
+        c--;
+        console.log(c);
+    
+        //Strings-------------------------------------------
+        console.log("Strings");
+
+        var str = "Aspas duplas \"dentro\" de aspas";
+        console.log(str);
+
+        var str2 = 'String com "aspas" simples';
+        console.log(str2);
+
+        var str3 = `Agora com " e '`;
+        console.log(str3);
+
+        var str4 = str + str2 + str3;
+        console.log(str4);
+
+        var tamanhostr4 = str4.length;
+        console.log(tamanhostr4);
+
+        function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+            var result = "my";
+            result += " " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb
+
+            return result;
+        }
+        console.log(wordBlanks("dog", "big", "ran", "quickly"));
+
+        //Array----------------------------------------------
+        console.log("Arrays");
+        var meuArray = [0, "teste", [1,2,3]]
+        console.log(meuArray);
+
+        meuArray[1] = 1
+        console.log(meuArray);
+
+        console.log(meuArray[2][2]);        
+
+    
+    </script>    
+</body>
+</html>

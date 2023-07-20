@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        var updog = {
+            "nome": "Polo",
+            "patas": 4,
+            "amigos": ["Todos"]
+        }
+
+        console.log(updog);
+
+        console.log(updog.patas);
+        console.log(updog["nome"]);
+
+        a = "amigos"
+        console.log(updog[a]);
+
+        updog["barulho"] = "AU au";
+        console.log(updog);
+
+        delete updog.amigos;
+        console.log(updog);
+        
+
+        function checkObj(obj, prop) {
+            if (obj.hasOwnProperty(prop)){
+                return updog[prop]
+            } else {
+                return "Nah"
+            }
+        }
+
+        console.log(checkObj(updog, "barulho"));
+
+    </script>
+</body>
+</html>
