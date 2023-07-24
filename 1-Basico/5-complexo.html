@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr1 = ["um", "dois", "tres"];
+        let arr2;
+
+        (function() {
+            arr2 = [...arr1];
+            arr1[0] = 1
+        })();
+
+        console.log(arr2);
+
+        //------------------
+
+        let voxel = {x: 1.2, y: 2.3}
+
+        const {x: a, y: b} = voxel;
+        console.log(a, b);
+
+        //------------------
+
+        const AVG = {
+            hj: 18.5,
+            ama: 20.4
+        }
+
+        function pegarTemAma(avgAma) {
+            "use strick";
+
+            const { ama: temAma } = avgAma;
+
+            return temAma
+        }
+
+        console.log(pegarTemAma(AVG));
+
+        //------------------
+
+        const AVG2 = {
+            hj: {min: 10,
+                max: 20
+            },
+            ama: {min: 20,
+                max: 30
+            }
+        };
+
+        function getMaxAma(avg) {
+            const { ama : { max: maxAma }} = avg;
+
+            return maxAma
+        }
+        
+        console.log(getMaxAma(AVG2));
+        
+        //------------------
+
+        const [ , , x, y] = [1, 2, 3, 4, 5];
+        console.log(x, y);
+
+        let aa = 6, bb = 7;
+        (() => {
+            [aa, bb] = [bb, aa];
+        })();
+        console.log(aa, bb);
+
+        //------------------
+
+        const sauce = [1,2,3,4,5,6];
+
+        function remove2(list) {
+            const [  ,  , ...arr] = list;
+            return arr;
+        }
+
+        console.log(remove2(sauce));
+
+        //------------------
+
+        const criarPessoa = (nome, idade) => ({nome, idade});
+
+        console.log(criarPessoa("Jota", 20));
+
+        //------------------
+
+        const bike = {
+            marchas: 2,
+            setMarcha(novaMarcha){
+                this.marchas = novaMarcha;
+            }
+        }
+
+        bike.setMarcha(3);
+        console.log(bike);
+
+        //------------------
+
+        var foguete = function(planeta){
+            this.planeta = planeta;
+        }
+
+        let zeus = new foguete("Jupiter");
+
+        console.log(zeus.planeta);
+
+        //------------------
+
+        class foguete2 {
+            constructor(planeta){
+                this.planeta = planeta;
+            }
+        }
+
+        let apollo = new foguete2("Jupiter");
+
+        console.log(apollo);
+
+        //------------------
+
+        function makeClass() {
+            class vegetal{
+                constructor(nome){
+                    this.nome = nome;
+                }
+            }
+
+            return vegetal;
+        }
+
+        const vegetal = makeClass();
+        const cenoura = new vegetal(`Cenoura`)
+
+        console.log(vegetal);
+        console.log(cenoura);
+
+    </script>
+</body>
+</html>

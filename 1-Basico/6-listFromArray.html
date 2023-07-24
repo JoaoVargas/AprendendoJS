@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const result = {
+        success: ["max-length", "no-amd", "prefer-arrow-functions"],
+        failure: ["no-var", "var-on-top", "linebreak"],
+        skipped: ["no-extra-semi", "no-dup-keys"]
+        };
+
+        function makeList(arr) {
+            const failureItems = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                failureItems.push(`<li class="text-warnig">${arr[i]}</li>`);
+            }
+
+            return failureItems;
+        }
+
+        const failuresList = makeList(result.failure);
+
+        console.log(failuresList);
+    </script>
+</body>
+</html>
