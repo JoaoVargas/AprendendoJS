@@ -1,14 +1,13 @@
-const Header = ({selectedTeam, teamMemberCount}) => {
+const NotFound = () => {
     return (
         <header className="container">
             <div className="row justify-content-center mt-3 mb-4">
                 <div className="col-8">
-                    <h1>Alocação de Membros</h1>
-                    <h3>Time {selectedTeam} possui {teamMemberCount} membro(os)</h3>
+                    <h1 className="text-danger">Erro 404 - Página não encontrada</h1>
                 </div>
             </div>
         </header>
     )
 }
 
-export default Header
+export default NotFound
