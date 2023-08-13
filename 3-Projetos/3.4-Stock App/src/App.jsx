@@ -1,15 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './assets/App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import StockDetailPage from './routes/StockDetailPage.jsx';
+import StockOverviewPage from './routes/StockOverviewPage.jsx';
+import { WatchListContextProvider } from './contexts/WatchListContext.jsx';
 
 function App() {
-
   return (
-    <h1>
-      Site
-    </h1>
-  )
+    <main className='container'>
+      <WatchListContextProvider>
+        <Router>
+          <Routes>
+            <Route
+              path='/'
+              element={<StockOverviewPage />}
+            />
+            <Route
+              path='/detail/:symbol'
+              element={<StockDetailPage />}
+            />
+          </Routes>
+        </Router>
+      </WatchListContextProvider>
+    </main>
+  );
 }
 
-export default App
+export default App;
