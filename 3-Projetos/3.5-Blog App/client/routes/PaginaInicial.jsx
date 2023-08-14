@@ -1,13 +1,11 @@
 import Header from '../components/Header';
-import Post from '../components/Post';
+import IndexPage from '../components/IndexPage';
 
 const PaginaInicial = () => {
   return (
     <main>
       <Header />
-      <Post />
-      <Post />
-      <Post />
+      <IndexPage />
     </main>
   );
 };

@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body{
   color: #222;
 }
@@ -25,7 +29,7 @@ header a{
   color: inherit;
 }
 
-header a.logo{
+header .logo{
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -64,4 +68,33 @@ div.post p.info a.autor{
 div.post p.resumo{
   margin: 10px 0;
   line-height: 1.4rem;
+}
+
+form.entrar, form.registrar{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input{
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px 7px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+button{
+  width: 100%;
+  display: block;
+  background-color: #888;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+}
+
+form h1{
+  text-align: center;
 }

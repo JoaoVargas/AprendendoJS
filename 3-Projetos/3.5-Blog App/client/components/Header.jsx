@@ -1,18 +1,20 @@
+import {Link} from 'react-router-dom'
+
 const Header = () => {
   return (
     <header>
-      <a
-        href=''
+      <Link
+        to='/'
         className='logo'
       >
         MyBlog
-      </a>
+      </Link>
       <nav>
-        <a href=''>Logar</a>
-        <a href=''>Registrar</a>
+        <Link to='/entrar'>Entrar</Link>
+        <Link to='/registrar'>Registrar</Link>
       </nav>
     </header>
   );
-}
+};
 
-export default Header
+export default Header;
