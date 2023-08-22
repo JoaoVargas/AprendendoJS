@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Carlito';
+    src:url('./src/assets/font/Carlito.ttf.woff') format('woff'),
+        url('./src/assets/font/Carlito.ttf.svg#Carlito') format('svg'),
+        url('./src/assets/font/Carlito.ttf.eot'),
+        url('./src/assets/font/Carlito.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  font-family: Carlito;
+  overflow-y: auto;
+}
